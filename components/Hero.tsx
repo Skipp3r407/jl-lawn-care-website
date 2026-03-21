@@ -4,22 +4,21 @@ const trustBadges = ["Local Deltona Service", "Residential Lawn Care", "Recurrin
 
 export default function Hero() {
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-[#0F172A] py-20 md:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_5%_15%,rgba(76,175,80,0.32),transparent_32%),radial-gradient(circle_at_95%_20%,rgba(46,125,50,0.28),transparent_36%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(15,23,42,0.95),rgba(17,24,39,0.78)_45%,rgba(15,23,42,0.9))]" />
-      <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10" />
-      <div className="absolute -left-16 top-16 h-52 w-52 rounded-full bg-[#4CAF50]/15 blur-3xl" />
-      <div className="absolute -right-16 bottom-10 h-60 w-60 rounded-full bg-[#2E7D32]/20 blur-3xl" />
+    <section id="top" className="relative isolate overflow-hidden bg-slate-950 py-16 md:py-24">
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_5%_15%,rgba(76,175,80,0.22),transparent_32%),radial-gradient(circle_at_95%_20%,rgba(46,125,50,0.2),transparent_36%)]" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(115deg,rgba(15,23,42,0.95),rgba(17,24,39,0.8)_45%,rgba(15,23,42,0.92))]" />
+      <div className="pointer-events-none absolute -left-20 top-16 z-0 h-44 w-44 rounded-full bg-[#4CAF50]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 bottom-8 z-0 h-48 w-48 rounded-full bg-[#2E7D32]/12 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 md:px-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="relative z-10 mx-auto grid min-h-[70vh] max-w-7xl items-center gap-8 px-6 md:gap-12 md:px-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="max-w-3xl space-y-6">
-          <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.12em] text-green-200">
+          <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.2em] text-green-200">
             Serving Deltona and Nearby Areas
           </p>
-          <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
             Reliable Lawn Care Services in Deltona, FL
           </h1>
-          <p className="max-w-2xl text-base leading-relaxed text-slate-200 md:text-lg">
+          <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
             Professional lawn mowing, yard cleanups, landscaping, and recurring lawn maintenance for
             homeowners in Deltona and nearby areas.
           </p>
@@ -29,13 +28,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3 max-sm:flex-col">
             <Link
               href="/#contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_32px_-20px_rgba(76,175,80,0.95)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-green-700 max-sm:w-full"
+              className="inline-flex items-center justify-center rounded-xl bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-700 max-sm:w-full"
             >
               Request a Free Quote
             </Link>
             <Link
               href="tel:13863349423"
-              className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/20 max-sm:w-full"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 max-sm:w-full"
             >
               Call (386) 334-9423
             </Link>

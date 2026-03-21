@@ -92,14 +92,14 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="border-t border-gray-100 bg-[#F8FAF8] py-20 md:py-28">
+    <section id="services" className="border-t border-gray-100 bg-[#F8FAF8] py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-600">Services</p>
-          <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-[#111827]">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-600">Services</p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#111827]">
             Our Lawn &amp; Yard Services
           </h2>
-          <p className="mt-4 text-gray-600 leading-relaxed">
+          <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">
             We help keep your property looking clean, healthy, and well-maintained with dependable lawn
             care services tailored to your needs.
           </p>
@@ -121,7 +121,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.title}

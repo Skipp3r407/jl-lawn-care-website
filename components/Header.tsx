@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -39,13 +39,11 @@ export default function Header() {
           aria-label="J&L Lawn Care homepage"
           className="inline-flex flex-shrink-0 items-center transition-transform duration-200 hover:scale-105"
         >
-          <Image
-            src="/images/logo.png"
-            alt="J&L Lawn Care Logo"
+          <BrandLogo
             width={220}
             height={60}
-            priority
             className="h-11 w-auto object-contain md:h-[60px]"
+            fallbackClassName="text-base md:text-lg text-slate-900"
           />
         </Link>
 

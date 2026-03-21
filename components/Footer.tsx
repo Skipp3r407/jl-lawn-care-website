@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function Footer() {
   return (
@@ -11,12 +11,11 @@ export default function Footer() {
             aria-label="Go to homepage"
             className="inline-flex items-center opacity-90 transition-opacity duration-200 hover:opacity-100"
           >
-            <Image
-              src="/images/logo.png"
-              alt="J&L Lawn Care Logo"
+            <BrandLogo
               width={150}
               height={40}
               className="h-10 w-auto object-contain"
+              fallbackClassName="text-base text-white"
             />
           </Link>
           <p className="mt-3 text-sm font-semibold text-gray-100">J&amp;L Lawn Care Services LLC</p>
