@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import BrandLogo from "@/components/BrandLogo";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -11,11 +11,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/20 bg-[#0f172a]/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <Link href="/" className="inline-flex items-center">
-          <BrandLogo
+          <Image
+            src="/images/logo.png"
+            alt="J&L Lawn Care Services LLC"
             width={180}
             height={60}
-            className="h-11 w-auto object-contain md:h-[58px]"
-            fallbackClassName="text-base md:text-lg text-white"
+            className="h-[42px] w-auto object-contain md:h-[56px]"
+            priority
           />
         </Link>
 

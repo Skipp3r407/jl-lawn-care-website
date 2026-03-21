@@ -1,19 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const trustBadges = ["5 Star Service", "Deltona Local", "Fast Response"];
 
 export default function Hero() {
   return (
-    <section
-      id="top"
-      className="relative isolate min-h-screen overflow-hidden"
-      style={{
-        backgroundImage:
-          "linear-gradient(120deg, rgba(15,23,42,0.82), rgba(15,23,42,0.65)), url('https://images.unsplash.com/photo-1593691509543-c55fb32f2ecf?auto=format&fit=crop&w=1800&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}
-    >
+    <section id="top" className="relative isolate min-h-screen overflow-hidden bg-slate-950">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-landscape.jpg"
+          alt="Beautiful landscaped lawn in Deltona"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(15,23,42,0.72),rgba(15,23,42,0.55))]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(76,175,80,0.22),transparent_30%)]" />
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-20 pt-28 md:px-10">
         <div className="max-w-3xl space-y-6">
