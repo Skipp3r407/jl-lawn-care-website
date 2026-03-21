@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     name: "Lauren H.",
-    city: "Deland",
+    city: "DeLand",
     quote: "They made our overgrown yard look amazing in one cleanup visit."
   },
   {
@@ -30,6 +30,15 @@ const testimonials = [
     quote: "Friendly local team and dependable service every time."
   }
 ];
+
+function initials(name: string) {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 function Stars() {
   return (
@@ -45,25 +54,32 @@ function Stars() {
 
 export default function Testimonials() {
   return (
-    <section id="reviews" className="bg-white py-20">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#2E7D32]">Testimonials</p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl">
+    <section id="reviews" className="border-t border-gray-100 bg-white py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-600">Testimonials</p>
+          <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-[#111827]">
             What Local Customers Are Saying
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((item) => (
             <article
               key={`${item.name}-${item.city}`}
-              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[0_14px_30px_-24px_rgba(17,24,39,0.55)]"
+              className="group rounded-2xl border border-gray-100 bg-[#F8FAF8] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <Stars />
-              <p className="text-gray-700">&ldquo;{item.quote}&rdquo;</p>
-              <p className="mt-4 text-sm font-bold text-[#111827]">{item.name}</p>
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-500">{item.city}</p>
+              <p className="text-gray-700 leading-relaxed">&ldquo;{item.quote}&rdquo;</p>
+              <div className="mt-5 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#2E7D32] to-[#4CAF50] text-xs font-bold text-white">
+                  {initials(item.name)}
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#111827]">{item.name}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-500">{item.city}</p>
+                </div>
+              </div>
             </article>
           ))}
         </div>

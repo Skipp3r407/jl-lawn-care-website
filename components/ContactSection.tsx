@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-[#F8FAF8] py-20">
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-        <aside className="rounded-3xl border border-gray-200 bg-white p-7 shadow-[0_16px_30px_-25px_rgba(17,24,39,0.6)]">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#2E7D32]">Contact</p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#111827]">Get Your Free Quote</h2>
-          <p className="mt-4 text-gray-600">
+    <section id="contact" className="border-t border-gray-100 bg-white py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <aside className="rounded-3xl border border-gray-200 bg-gradient-to-br from-[#F8FAF8] to-white p-7 shadow-sm">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-600">Contact</p>
+          <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-[#111827]">Get Your Free Quote</h2>
+          <p className="mt-4 text-gray-600 leading-relaxed">
             Reach out today for dependable local lawn care services in Deltona and nearby areas.
           </p>
           <div className="mt-6 space-y-3 text-sm">
@@ -32,8 +32,8 @@ export default function ContactSection() {
           </div>
         </aside>
 
-        <div className="rounded-3xl border border-gray-200 bg-white p-7 shadow-[0_16px_30px_-25px_rgba(17,24,39,0.6)]">
-          <h3 className="text-2xl font-bold text-[#111827]">Request Quote</h3>
+        <div className="rounded-3xl border border-gray-200 bg-white p-7 shadow-[0_22px_45px_-30px_rgba(15,23,42,0.7)]">
+          <h3 className="text-2xl font-semibold text-[#111827]">Request Quote</h3>
           <form className="mt-6 space-y-4">
             <label className="block text-sm font-semibold text-gray-700">
               Name
@@ -85,7 +85,7 @@ export default function ContactSection() {
             </label>
             <button
               type="submit"
-              className="inline-flex items-center justify-center rounded-xl bg-[#2E7D32] px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1B5E20]"
+              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-gradient-to-r from-[#2E7D32] to-[#1B5E20] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_25px_-18px_rgba(27,94,32,0.9)] transition-all duration-200 hover:-translate-y-0.5"
             >
               Request Quote
             </button>

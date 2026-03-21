@@ -29,11 +29,11 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         isScrolled
-          ? "border-gray-200 bg-white/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/90"
-          : "border-transparent bg-white/70 backdrop-blur"
+          ? "border-white/50 bg-white/85 shadow-[0_10px_30px_-22px_rgba(15,23,42,0.85)] backdrop-blur-xl"
+          : "border-transparent bg-white/60 backdrop-blur-lg"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-2 md:px-10">
         <Link
           href="/"
           aria-label="J&L Lawn Care homepage"
@@ -54,9 +54,10 @@ export default function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-semibold text-gray-600 transition-colors duration-200 hover:text-[#2E7D32]"
+              className="group relative text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-[#1B5E20]"
             >
               {item.label}
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#2E7D32] transition-all duration-200 group-hover:w-full" />
             </Link>
           ))}
         </nav>
@@ -64,13 +65,13 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link
             href="tel:13863349423"
-            className="hidden rounded-xl bg-[#2E7D32] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1B5E20] sm:inline-flex"
+            className="hidden rounded-xl bg-gradient-to-r from-[#2E7D32] to-[#1B5E20] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_10px_22px_-14px_rgba(27,94,32,0.9)] transition-all duration-200 hover:-translate-y-0.5 sm:inline-flex"
           >
             Call Now
           </Link>
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-xl border border-gray-300 p-2 text-gray-700 transition hover:border-[#2E7D32] hover:text-[#2E7D32] lg:hidden"
+            className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white/80 p-2 text-gray-700 transition hover:border-[#2E7D32] hover:text-[#2E7D32] lg:hidden"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label="Toggle navigation menu"
             aria-expanded={menuOpen}
@@ -87,17 +88,17 @@ export default function Header() {
       </div>
 
       <div
-        className={`overflow-hidden border-t border-gray-200 bg-white transition-all duration-300 lg:hidden ${
-          menuOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden border-t border-gray-200 bg-white/95 backdrop-blur-xl transition-all duration-300 lg:hidden ${
+          menuOpen ? "max-h-[460px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-3 sm:px-6" aria-label="Mobile navigation">
+        <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4 md:px-10" aria-label="Mobile navigation">
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 transition-colors duration-200 hover:bg-gray-100 hover:text-[#2E7D32]"
+              className="rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-700 transition-colors duration-200 hover:bg-green-50 hover:text-[#2E7D32]"
             >
               {item.label}
             </Link>
@@ -105,9 +106,16 @@ export default function Header() {
           <Link
             href="tel:13863349423"
             onClick={() => setMenuOpen(false)}
-            className="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-[#2E7D32] px-4 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1B5E20]"
+            className="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#2E7D32] to-[#1B5E20] px-4 py-3 text-sm font-semibold text-white transition duration-200"
           >
             Call Now
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setMenuOpen(false)}
+            className="inline-flex w-full items-center justify-center rounded-xl border border-gray-300 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-gray-50"
+          >
+            Request a Free Quote
           </Link>
         </nav>
       </div>

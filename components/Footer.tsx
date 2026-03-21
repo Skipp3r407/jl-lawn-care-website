@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111827] text-gray-200">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3 lg:px-8">
+    <footer className="border-t border-slate-800 bg-[#0F172A] text-gray-200">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 md:px-10 lg:grid-cols-3">
         <div>
           <Link
             href="/"
@@ -24,9 +24,15 @@ export default function Footer() {
           <p className="mt-2 text-sm text-gray-400">
             Trusted residential lawn care for Deltona and nearby Central Florida communities.
           </p>
+          <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-green-300">Serving</p>
+            <p className="mt-1 text-sm text-gray-300">
+              Deltona, DeBary, Orange City, DeLand, Sanford, Lake Mary, Altamonte Springs
+            </p>
+          </div>
         </div>
 
-        <div>
+        <div className="lg:pl-6 lg:border-l lg:border-white/10">
           <h3 className="text-base font-semibold text-white">Quick Links</h3>
           <ul className="mt-4 space-y-2 text-sm text-gray-400">
             <li>
@@ -67,12 +73,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="lg:pl-6 lg:border-l lg:border-white/10">
           <h3 className="text-base font-semibold text-white">Services & Contact</h3>
           <ul className="mt-4 space-y-2 text-sm text-gray-400">
             <li>Lawn Mowing</li>
             <li>Recurring Lawn Service</li>
             <li>Yard Cleanups &amp; Edging</li>
+            <li>Landscaping</li>
             <li>
               <Link href="tel:13863349423" className="transition-colors duration-200 hover:text-white">
                 (386) 334-9423
@@ -86,10 +93,7 @@ export default function Footer() {
                 j.l.lawncareservices16@gmail.com
               </Link>
             </li>
-            <li>Deltona, FL</li>
-            <li className="pt-2 text-gray-500">
-              Serving Deltona, DeBary, Orange City, DeLand, Sanford, Lake Mary, and Altamonte Springs.
-            </li>
+            <li>Deltona, FL, United States</li>
           </ul>
         </div>
       </div>
@@ -100,7 +104,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="w-full bg-black py-2 text-center text-xs text-gray-400">
+      <div className="w-full bg-black/90 py-2 text-center text-xs text-gray-400">
         <Link
           href="https://elevatedigitalstudios.net/"
           target="_blank"

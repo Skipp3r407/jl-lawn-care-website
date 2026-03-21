@@ -1,20 +1,22 @@
 const trustItems = [
   "Local Deltona Service",
-  "Residential Lawn Care",
+  "Commercial & Residential",
   "Recurring Service Available",
   "Fast Quote Response"
 ];
 
 export default function TrustBar() {
   return (
-    <section className="border-y border-green-100 bg-white">
-      <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-4 py-4 sm:px-6 lg:px-8">
-        {trustItems.map((item) => (
-          <div key={item} className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700">
-            <span className="h-2 w-2 rounded-full bg-[#4CAF50]" />
-            {item}
-          </div>
-        ))}
+    <section className="border-y border-slate-100 bg-white py-8 md:py-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {trustItems.map((item) => (
+            <div key={item} className="rounded-2xl border border-gray-100 bg-[#F8FAF8] px-4 py-3 text-sm font-semibold text-slate-700">
+              <span className="mr-2 inline-flex h-2.5 w-2.5 rounded-full bg-[#2E7D32]" />
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

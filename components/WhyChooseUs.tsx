@@ -19,28 +19,28 @@ const highlights = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#F8FAF8] py-20">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#2E7D32]">Why Choose Us</p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl">
+    <section className="border-t border-slate-800 bg-[#111827] py-20 text-white md:py-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="text-center mb-10">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-300">Why Choose Us</p>
+          <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-white">
             Why Homeowners Choose J&amp;L Lawn Care
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="grid md:grid-cols-2 gap-6 mt-6">
           {highlights.map((item) => (
             <article
               key={item.title}
-              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[0_14px_28px_-24px_rgba(17,24,39,0.55)]"
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
             >
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#2E7D32]/10 text-[#2E7D32]">
-                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 13l4 4L19 7" />
-                </svg>
+              <div className="flex items-start gap-3">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-green-400" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                  <p className="mt-2 leading-relaxed text-slate-300">{item.text}</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#111827]">{item.title}</h3>
-              <p className="mt-2 text-gray-600">{item.text}</p>
             </article>
           ))}
         </div>
