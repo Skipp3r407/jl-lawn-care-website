@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const testimonials = [
   {
     name: "Melissa R.",
@@ -53,35 +57,54 @@ function Stars() {
 }
 
 export default function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const current = testimonials[index];
+
+  const prev = () => setIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+  const next = () => setIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+
   return (
     <section id="reviews" className="border-t border-gray-100 bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-green-600">Testimonials</p>
-          <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-[#111827]">
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#111827]">
             What Local Customers Are Saying
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((item) => (
-            <article
-              key={`${item.name}-${item.city}`}
-              className="group rounded-2xl border border-gray-100 bg-[#F8FAF8] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        <div className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-[#F8FAF8] p-8 shadow-lg">
+          <Stars />
+          <p className="text-lg leading-8 text-slate-700">&ldquo;{current.quote}&rdquo;</p>
+          <div className="mt-6 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#2E7D32] to-[#4CAF50] text-sm font-bold text-white">
+              {initials(current.name)}
+            </div>
+            <div>
+              <p className="font-bold text-slate-900">{current.name}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">{current.city}</p>
+            </div>
+          </div>
+
+          <div className="mt-7 flex items-center justify-between">
+            <button
+              type="button"
+              onClick={prev}
+              className="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
             >
-              <Stars />
-              <p className="text-gray-700 leading-relaxed">&ldquo;{item.quote}&rdquo;</p>
-              <div className="mt-5 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#2E7D32] to-[#4CAF50] text-xs font-bold text-white">
-                  {initials(item.name)}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-[#111827]">{item.name}</p>
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-500">{item.city}</p>
-                </div>
-              </div>
-            </article>
-          ))}
+              Prev
+            </button>
+            <div className="text-sm text-slate-500">
+              {index + 1} / {testimonials.length}
+            </div>
+            <button
+              type="button"
+              onClick={next}
+              className="rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-700"
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </section>

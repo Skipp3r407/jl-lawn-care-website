@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 
 type Service = {
   title: string;
   description: string;
+  image: string;
   icon: ReactNode;
 };
 
@@ -10,6 +12,8 @@ const services: Service[] = [
   {
     title: "Lawn Mowing",
     description: "Scheduled mowing for a clean, healthy lawn that always looks cared for.",
+    image:
+      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M4 14h8l4 4h4" />
@@ -22,6 +26,8 @@ const services: Service[] = [
   {
     title: "Lawn Maintenance",
     description: "Consistent yard upkeep plans tailored for Deltona-area residential properties.",
+    image:
+      "https://images.unsplash.com/photo-1563212031-ae4df5f0f6c7?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 3v18M6 12h12" />
@@ -32,6 +38,8 @@ const services: Service[] = [
   {
     title: "Yard Clean Up",
     description: "Remove leaves, debris, and overgrowth to refresh your outdoor space quickly.",
+    image:
+      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M4 18h16M6 18l2-9h8l2 9" />
@@ -42,6 +50,8 @@ const services: Service[] = [
   {
     title: "Landscaping",
     description: "Light landscape touch-ups that improve curb appeal and visual balance.",
+    image:
+      "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 20V8" />
@@ -53,6 +63,8 @@ const services: Service[] = [
   {
     title: "Grass Cutting",
     description: "Precision cutting designed to keep your lawn even, tidy, and neighborhood-ready.",
+    image:
+      "https://images.unsplash.com/photo-1599687266725-1a7f5d12c9dd?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M5 20l6-6M9 20l6-6M13 20l6-6" />
@@ -63,6 +75,8 @@ const services: Service[] = [
   {
     title: "Recurring Lawn Service",
     description: "Weekly or biweekly recurring service options with dependable scheduling.",
+    image:
+      "https://images.unsplash.com/photo-1562748153-6570f3f6ef8f?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M20 12a8 8 0 1 1-2.3-5.7" />
@@ -73,6 +87,8 @@ const services: Service[] = [
   {
     title: "Trimming & Edging",
     description: "Sharp lines around sidewalks, driveways, and beds for a polished finish.",
+    image:
+      "https://images.unsplash.com/photo-1464638681273-0962e9b53566?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M3 20h18M6 16l4-4 3 3 5-5" />
@@ -82,6 +98,8 @@ const services: Service[] = [
   {
     title: "Seasonal Cleanups",
     description: "Targeted cleanup services for high-growth and transition seasons in Florida.",
+    image:
+      "https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&w=900&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 21c4-4 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7 7 11Z" />
@@ -92,7 +110,7 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="border-t border-gray-100 bg-[#F8FAF8] py-16 md:py-24">
+    <section id="services" className="border-t border-gray-100 bg-[#F8FAF8] py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-600">Services</p>
@@ -105,38 +123,34 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mb-6 rounded-3xl border border-green-100 bg-gradient-to-r from-green-50 to-white p-6 md:p-7">
-          <div className="grid items-center gap-5 md:grid-cols-[1.2fr_0.8fr]">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-green-700">Most Requested</p>
-              <h3 className="mt-2 text-xl font-semibold text-[#111827]">Recurring Lawn Service Plans</h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Keep your property consistently clean with weekly or biweekly lawn maintenance tailored to your yard and schedule.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              <div className="rounded-xl bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm">Commercial &amp; Residential</div>
-              <div className="rounded-xl bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm">Fast Quote Response</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <article
+            <Link
               key={service.title}
-              className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-lg"
+              href="/services"
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-2xl"
             >
-              <div className="inline-flex rounded-xl border border-green-100 bg-green-50 p-2.5 text-[#2E7D32] transition-colors duration-300 group-hover:bg-[#2E7D32] group-hover:text-white">
-                {service.icon}
+              <div
+                className="h-40 w-full bg-cover bg-center"
+                style={{
+                  backgroundImage: `linear-gradient(to top, rgba(15,23,42,.65), rgba(15,23,42,.2)), url('${service.image}')`
+                }}
+              >
+                <div className="flex h-full items-end p-4">
+                  <div className="inline-flex rounded-xl border border-white/30 bg-white/10 p-2 text-white backdrop-blur">
+                    {service.icon}
+                  </div>
+                </div>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-[#111827]">{service.title}</h3>
-              <p className="mt-2 text-sm text-gray-600 leading-relaxed">{service.description}</p>
-              <div className="mt-4 inline-flex items-center text-sm font-semibold text-[#2E7D32]">
-                Learn More
-                <span className="ml-1 transition-transform duration-200 group-hover:translate-x-1">→</span>
+              <div className="p-5">
+                <h3 className="text-lg font-semibold text-[#111827]">{service.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">{service.description}</p>
+                <div className="mt-4 inline-flex items-center text-sm font-semibold text-[#2E7D32]">
+                  Explore Service
+                  <span className="ml-1 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

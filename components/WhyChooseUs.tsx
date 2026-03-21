@@ -1,19 +1,19 @@
 const highlights = [
   {
-    title: "Local and Dependable Service",
-    text: "We proudly serve Deltona homeowners with on-time, reliable lawn care visits."
+    title: "Fast Response",
+    text: "Quick scheduling, prompt callbacks, and easy quote turnaround."
   },
   {
-    title: "Quality Work, Detail Focused",
-    text: "From clean mowing lines to precise edging, we treat every yard with care."
+    title: "Local Experts",
+    text: "Deltona-focused team with local knowledge of seasonal lawn conditions."
   },
   {
-    title: "Recurring & One-Time Options",
-    text: "Choose weekly maintenance or one-time cleanups based on your property needs."
+    title: "Reliable Service",
+    text: "Consistent quality from mowing to cleanup and recurring maintenance."
   },
   {
-    title: "Fast Response, Easy Quotes",
-    text: "Call or message us for quick pricing and straightforward service scheduling."
+    title: "Affordable Pricing",
+    text: "Clear, fair estimates designed for residential and commercial properties."
   }
 ];
 
