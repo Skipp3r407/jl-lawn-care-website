@@ -1,0 +1,26 @@
+{
+  "name": "jl-lawn-care-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node \"./node_modules/next/dist/bin/next\" dev",
+    "build": "node \"./node_modules/next/dist/bin/next\" build",
+    "start": "node \"./node_modules/next/dist/bin/next\" start",
+    "lint": "node \"./node_modules/next/dist/bin/next\" lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

@@ -1,0 +1,115 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#111827] text-gray-200">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3 lg:px-8">
+        <div>
+          <Link
+            href="/"
+            aria-label="Go to homepage"
+            className="inline-flex items-center opacity-90 transition-opacity duration-200 hover:opacity-100"
+          >
+            <Image
+              src="/images/logo.png"
+              alt="J&L Lawn Care Logo"
+              width={150}
+              height={40}
+              className="h-10 w-auto object-contain"
+            />
+          </Link>
+          <p className="mt-3 text-sm font-semibold text-gray-100">J&amp;L Lawn Care Services LLC</p>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#4CAF50]">Commercial &amp; Residential</p>
+          <p className="mt-2 text-sm text-gray-400">
+            Trusted residential lawn care for Deltona and nearby Central Florida communities.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-base font-semibold text-white">Quick Links</h3>
+          <ul className="mt-4 space-y-2 text-sm text-gray-400">
+            <li>
+              <Link href="/#top" className="transition-colors duration-200 hover:text-white">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="transition-colors duration-200 hover:text-white">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="transition-colors duration-200 hover:text-white">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/service-areas" className="transition-colors duration-200 hover:text-white">
+                Service Areas
+              </Link>
+            </li>
+            <li>
+              <Link href="/testimonials" className="transition-colors duration-200 hover:text-white">
+                Reviews
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" className="transition-colors duration-200 hover:text-white">
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="transition-colors duration-200 hover:text-white">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-base font-semibold text-white">Services & Contact</h3>
+          <ul className="mt-4 space-y-2 text-sm text-gray-400">
+            <li>Lawn Mowing</li>
+            <li>Recurring Lawn Service</li>
+            <li>Yard Cleanups &amp; Edging</li>
+            <li>
+              <Link href="tel:13863349423" className="transition-colors duration-200 hover:text-white">
+                (386) 334-9423
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="mailto:j.l.lawncareservices16@gmail.com"
+                className="transition-colors duration-200 hover:text-white"
+              >
+                j.l.lawncareservices16@gmail.com
+              </Link>
+            </li>
+            <li>Deltona, FL</li>
+            <li className="pt-2 text-gray-500">
+              Serving Deltona, DeBary, Orange City, DeLand, Sanford, Lake Mary, and Altamonte Springs.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10 py-5">
+        <p className="text-center text-xs text-gray-500">
+          &copy; {new Date().getFullYear()} J&amp;L Lawn Care Services LLC. All rights reserved.
+        </p>
+      </div>
+
+      <div className="w-full bg-black py-2 text-center text-xs text-gray-400">
+        <Link
+          href="https://elevatedigitalstudios.net/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors duration-200 hover:text-white"
+        >
+          Website Design by Elevate Digital Co.
+        </Link>
+      </div>
+    </footer>
+  );
+}
