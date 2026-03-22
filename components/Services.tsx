@@ -13,7 +13,7 @@ const services: Service[] = [
     title: "Lawn Mowing",
     description: "Scheduled mowing for a clean, healthy lawn that always looks cared for.",
     image:
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M4 14h8l4 4h4" />
@@ -27,7 +27,7 @@ const services: Service[] = [
     title: "Lawn Maintenance",
     description: "Consistent yard upkeep plans tailored for Deltona-area residential properties.",
     image:
-      "https://images.unsplash.com/photo-1563212031-ae4df5f0f6c7?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1593691509543-c55fb32f2ecf?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 3v18M6 12h12" />
@@ -39,7 +39,7 @@ const services: Service[] = [
     title: "Yard Clean Up",
     description: "Remove leaves, debris, and overgrowth to refresh your outdoor space quickly.",
     image:
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M4 18h16M6 18l2-9h8l2 9" />
@@ -51,7 +51,7 @@ const services: Service[] = [
     title: "Landscaping",
     description: "Light landscape touch-ups that improve curb appeal and visual balance.",
     image:
-      "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 20V8" />
@@ -64,7 +64,7 @@ const services: Service[] = [
     title: "Grass Cutting",
     description: "Precision cutting designed to keep your lawn even, tidy, and neighborhood-ready.",
     image:
-      "https://images.unsplash.com/photo-1599687266725-1a7f5d12c9dd?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1599687266725-1a7f5d12c9dd?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M5 20l6-6M9 20l6-6M13 20l6-6" />
@@ -76,7 +76,7 @@ const services: Service[] = [
     title: "Recurring Lawn Service",
     description: "Weekly or biweekly recurring service options with dependable scheduling.",
     image:
-      "https://images.unsplash.com/photo-1562748153-6570f3f6ef8f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1527576539890-dfa815648363?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M20 12a8 8 0 1 1-2.3-5.7" />
@@ -88,7 +88,7 @@ const services: Service[] = [
     title: "Trimming & Edging",
     description: "Sharp lines around sidewalks, driveways, and beds for a polished finish.",
     image:
-      "https://images.unsplash.com/photo-1464638681273-0962e9b53566?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1464638681273-0962e9b53566?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M3 20h18M6 16l4-4 3 3 5-5" />
@@ -99,7 +99,7 @@ const services: Service[] = [
     title: "Seasonal Cleanups",
     description: "Targeted cleanup services for high-growth and transition seasons in Florida.",
     image:
-      "https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1600&q=80",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 21c4-4 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7 7 11Z" />
