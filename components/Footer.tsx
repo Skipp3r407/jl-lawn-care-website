@@ -110,7 +110,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="transition-colors duration-200 hover:text-white"
         >
-          Website Design by Elevate Digital Co.
+          Website Design by Elevate Digital Studio.
         </Link>
       </div>
     </footer>
