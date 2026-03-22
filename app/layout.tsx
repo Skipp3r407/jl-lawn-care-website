@@ -5,9 +5,13 @@ import Footer from "@/components/Footer";
 import StickyMobileCall from "@/components/StickyMobileCall";
 
 export const metadata: Metadata = {
-  title: "Lawn Care in Deltona, FL | J&L Lawn Care Services LLC",
-  description:
-    "Professional lawn care in Deltona, FL by J&L Lawn Care Services LLC. Call for mowing, recurring maintenance, yard cleanup, trimming, and landscaping services.",
+  title: "J&L Lawn Care Services LLC",
+  description: "Reliable lawn care services in Deltona, FL",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png"
+  },
   keywords: [
     "lawn care Deltona FL",
     "lawn mowing Deltona",
