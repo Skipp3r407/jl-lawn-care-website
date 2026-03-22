@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: "J&L Lawn Care Services LLC",
   description: "Reliable lawn care services in Deltona, FL",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png"
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png"
   },
   keywords: [
     "lawn care Deltona FL",
