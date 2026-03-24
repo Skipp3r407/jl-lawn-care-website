@@ -6,7 +6,6 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
   color: #111827;
   font-family:
     Inter,
@@ -30,4 +29,19 @@ body {
 
 ::selection {
   background: rgba(46, 125, 50, 0.18);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.75s ease-out forwards;
 }

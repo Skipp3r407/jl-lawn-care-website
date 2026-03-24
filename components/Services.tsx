@@ -1,5 +1,10 @@
+"use client";
+
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { fadeInLeft, staggerContainer } from "@/lib/motion-variants";
 
 type Service = {
   title: string;
@@ -108,51 +113,67 @@ const services: Service[] = [
   }
 ];
 
+const viewport = { once: true, amount: 0.2 } as const;
+
 export default function Services() {
   return (
-    <section id="services" className="border-t border-gray-100 bg-[#F8FAF8] py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-600">Services</p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#111827]">
-            Our Lawn &amp; Yard Services
-          </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">
+    <section
+      id="services"
+      className="border-t border-white/10 bg-gradient-to-b from-slate-900/90 via-slate-950/95 to-slate-950 py-20 md:py-28"
+    >
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <motion.div
+          className="mx-auto mb-12 max-w-3xl text-center"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+        >
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-400">Services</p>
+          <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">Our Lawn &amp; Yard Services</h2>
+          <p className="mt-4 text-base leading-7 text-slate-300 md:text-lg">
             We help keep your property looking clean, healthy, and well-maintained with dependable lawn
             care services tailored to your needs.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+        >
           {services.map((service) => (
-            <Link
-              key={service.title}
-              href="/services"
-              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-2xl"
-            >
-              <div
-                className="h-40 w-full bg-cover bg-center"
-                style={{
-                  backgroundImage: `linear-gradient(to top, rgba(15,23,42,.65), rgba(15,23,42,.2)), url('${service.image}')`
-                }}
+            <motion.div key={service.title} variants={fadeInLeft} className="h-full min-h-0">
+              <Link
+                href="/services"
+                className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-lg shadow-black/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl hover:shadow-emerald-500/10"
               >
-                <div className="flex h-full items-end p-4">
-                  <div className="inline-flex rounded-xl border border-white/30 bg-white/10 p-2 text-white backdrop-blur">
-                    {service.icon}
+                <div
+                  className="relative h-40 w-full shrink-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `linear-gradient(to top, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.35) 45%, rgba(15,23,42,0.15) 100%), url('${service.image}')`
+                  }}
+                >
+                  <div className="flex h-full items-end p-4">
+                    <div className="inline-flex rounded-xl border border-white/25 bg-white/10 p-2 text-emerald-100 backdrop-blur">
+                      {service.icon}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-[#111827]">{service.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">{service.description}</p>
-                <div className="mt-4 inline-flex items-center text-sm font-semibold text-[#2E7D32]">
-                  Explore Service
-                  <span className="ml-1 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-300">{service.description}</p>
+                  <div className="mt-4 inline-flex items-center text-sm font-semibold text-emerald-400">
+                    Explore Service
+                    <span className="ml-1 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

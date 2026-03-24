@@ -19,13 +19,13 @@ export default function CTASection() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/#contact"
-                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[#1B5E20] transition-all duration-200 hover:-translate-y-0.5"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-emerald-400 px-5 py-3 text-sm font-semibold text-[#064e3b] shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:scale-[1.02] hover:bg-emerald-300 hover:shadow-emerald-300/40"
               >
                 Request a Free Quote
               </Link>
               <Link
                 href="tel:13863349423"
-                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/40 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10"
               >
                 Call Now
               </Link>

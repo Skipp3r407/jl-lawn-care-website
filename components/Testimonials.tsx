@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+import { fadeInLeft, fadeInRight } from "@/lib/motion-variants";
 
 const testimonials = [
   {
@@ -56,6 +59,8 @@ function Stars() {
   );
 }
 
+const viewport = { once: true, amount: 0.2 } as const;
+
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const current = testimonials[index];
@@ -65,15 +70,27 @@ export default function Testimonials() {
 
   return (
     <section id="reviews" className="border-t border-gray-100 bg-white py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <motion.div
+          className="mx-auto mb-12 max-w-3xl text-center"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+        >
           <p className="text-sm font-bold uppercase tracking-widest text-green-600">Testimonials</p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#111827]">
+          <h2 className="mt-3 text-3xl font-bold text-[#111827] md:text-4xl">
             What Local Customers Are Saying
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-[#F8FAF8] p-8 shadow-lg">
+        <motion.div
+          className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-[#F8FAF8] p-8 shadow-lg"
+          variants={fadeInRight}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+        >
           <Stars />
           <p className="text-lg leading-8 text-slate-700">&ldquo;{current.quote}&rdquo;</p>
           <div className="mt-6 flex items-center gap-3">
@@ -105,7 +122,7 @@ export default function Testimonials() {
               Next
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

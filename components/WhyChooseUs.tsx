@@ -1,3 +1,9 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+import { fadeInLeft, fadeInRight, staggerContainer } from "@/lib/motion-variants";
+
 const highlights = [
   {
     title: "Fast Response",
@@ -17,22 +23,37 @@ const highlights = [
   }
 ];
 
+const viewport = { once: true, amount: 0.2 } as const;
+
 export default function WhyChooseUs() {
   return (
     <section className="border-t border-slate-800 bg-[#111827] py-20 text-white md:py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="text-center mb-10">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <motion.div
+          className="mb-10 text-center"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+        >
           <p className="text-sm font-bold uppercase tracking-widest text-green-300">Why Choose Us</p>
-          <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-white">
+          <h2 className="mt-3 text-2xl font-semibold text-white md:text-3xl">
             Why Homeowners Choose J&amp;L Lawn Care
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
-          {highlights.map((item) => (
-            <article
+        <motion.div
+          className="mt-6 grid gap-6 md:grid-cols-2"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+        >
+          {highlights.map((item, index) => (
+            <motion.article
               key={item.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10"
             >
               <div className="flex items-start gap-3">
                 <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-green-400" />
@@ -41,9 +62,9 @@ export default function WhyChooseUs() {
                   <p className="mt-2 leading-relaxed text-slate-300">{item.text}</p>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
