@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { DEMO_PHONE_TEL } from "@/lib/demo-contact";
+
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -50,7 +52,7 @@ export default function Header() {
             Contact
           </a>
           <a
-            href="tel:13863349423"
+            href={DEMO_PHONE_TEL}
             className="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/35 transition-all duration-300 hover:scale-[1.02] hover:bg-emerald-400 hover:shadow-emerald-400/40"
           >
             Call Now
@@ -103,7 +105,7 @@ export default function Header() {
             Contact
           </a>
           <a
-            href="tel:13863349423"
+            href={DEMO_PHONE_TEL}
             onClick={() => setOpen(false)}
             className="mt-2 inline-flex items-center justify-center rounded-xl bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30"
           >

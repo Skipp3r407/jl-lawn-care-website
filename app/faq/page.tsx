@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { DEMO_PHONE_DISPLAY, DEMO_PHONE_TEL } from "@/lib/demo-contact";
+
 export const metadata: Metadata = {
-  title: "Lawn Care FAQ | J&L Lawn Care Services LLC Deltona",
+  title: "Lawn Care FAQ | J&L Lawn Care (Portfolio Demo)",
   description:
-    "Answers to common questions about recurring lawn service, service areas, one-time cleanups, and quote requests for Deltona homeowners."
+    "Portfolio demo FAQ for a Deltona-area lawn care layout. Answers use sample copy; contact info is placeholder only."
 };
 
 const faqs = [
@@ -28,7 +30,7 @@ const faqs = [
   },
   {
     question: "How do I request a quote?",
-    answer: "Call (386) 334-9423 or submit the contact form for a quick estimate."
+    answer: `Call ${DEMO_PHONE_DISPLAY} or submit the contact form for a quick estimate.`
   },
   {
     question: "Do you offer one-time cleanups?",
@@ -82,7 +84,7 @@ export default function FAQPage() {
               Request a Free Quote
             </Link>
             <Link
-              href="tel:13863349423"
+              href={DEMO_PHONE_TEL}
               className="inline-flex rounded-xl border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Call Now

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { DEMO_PHONE_DISPLAY } from "@/lib/demo-contact";
+
 const faqs = [
   {
     question: "Do you offer recurring lawn service?",
@@ -25,7 +27,7 @@ const faqs = [
   {
     question: "How do I request a quote?",
     answer:
-      "Call us at (386) 334-9423 or fill out the quote form below. We respond quickly with local pricing and availability."
+      `Call us at ${DEMO_PHONE_DISPLAY} or fill out the quote form below. We respond quickly with local pricing and availability.`
   },
   {
     question: "Do you offer one-time cleanups?",

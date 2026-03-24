@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contact J&L Lawn Care Services LLC | Free Quote Deltona",
+  title: "Contact | J&L Lawn Care (Portfolio Demo)",
   description:
-    "Call or contact J&L Lawn Care Services LLC for lawn care in Deltona, FL. Request a free quote for mowing, cleanup, and maintenance."
+    "Portfolio demo contact page for a Deltona-area lawn care layout. Phone and email are placeholders; form does not send messages."
 };
 
 export default function ContactPage() {

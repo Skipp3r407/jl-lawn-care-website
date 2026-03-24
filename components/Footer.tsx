@@ -1,5 +1,12 @@
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
+import {
+  DEMO_EMAIL,
+  DEMO_LOCATION,
+  DEMO_MAILTO,
+  DEMO_PHONE_DISPLAY,
+  DEMO_PHONE_TEL
+} from "@/lib/demo-contact";
 
 export default function Footer() {
   return (
@@ -80,19 +87,16 @@ export default function Footer() {
             <li>Yard Cleanups &amp; Edging</li>
             <li>Landscaping</li>
             <li>
-              <Link href="tel:13863349423" className="transition-colors duration-200 hover:text-white">
-                (386) 334-9423
+              <Link href={DEMO_PHONE_TEL} className="transition-colors duration-200 hover:text-white">
+                {DEMO_PHONE_DISPLAY}
               </Link>
             </li>
             <li>
-              <Link
-                href="mailto:j.l.lawncareservices16@gmail.com"
-                className="transition-colors duration-200 hover:text-white"
-              >
-                j.l.lawncareservices16@gmail.com
+              <Link href={DEMO_MAILTO} className="transition-colors duration-200 hover:text-white">
+                {DEMO_EMAIL}
               </Link>
             </li>
-            <li>Deltona, FL, United States</li>
+            <li>{DEMO_LOCATION}</li>
           </ul>
         </div>
       </div>

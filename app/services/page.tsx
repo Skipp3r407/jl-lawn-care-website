@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { DEMO_PHONE_TEL } from "@/lib/demo-contact";
+
 export const metadata: Metadata = {
   title: "Lawn Care Services in Deltona, FL | J&L Lawn Care",
   description:
@@ -110,7 +112,7 @@ export default function ServicesPage() {
                     Request a Free Quote
                   </Link>
                   <Link
-                    href="tel:13863349423"
+                    href={DEMO_PHONE_TEL}
                     className="inline-flex rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:border-[#2E7D32] hover:text-[#1B5E20]"
                   >
                     Call Now

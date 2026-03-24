@@ -5,8 +5,9 @@ import Footer from "@/components/Footer";
 import StickyMobileCall from "@/components/StickyMobileCall";
 
 export const metadata: Metadata = {
-  title: "J&L Lawn Care Services LLC",
-  description: "Reliable lawn care services in Deltona, FL",
+  title: "J&L Lawn Care Services LLC (Portfolio Demo)",
+  description:
+    "Portfolio demo site for a local lawn care brand in Deltona, FL. Contact details shown are placeholders only.",
   icons: {
     icon: "/images/favicon.png",
     shortcut: "/images/favicon.png",
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
     "recurring lawn service Deltona"
   ],
   openGraph: {
-    title: "Lawn Care in Deltona, FL | J&L Lawn Care Services LLC",
+    title: "Lawn Care in Deltona, FL | J&L Lawn Care (Demo)",
     description:
-      "Reliable lawn mowing, cleanup, landscaping, and recurring yard maintenance in Deltona and nearby areas.",
+      "Portfolio demo: lawn mowing, cleanup, landscaping, and recurring yard maintenance — placeholder contact info only.",
     type: "website",
     locale: "en_US"
   }

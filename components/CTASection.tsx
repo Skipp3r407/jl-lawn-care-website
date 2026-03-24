@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { DEMO_PHONE_TEL } from "@/lib/demo-contact";
+
 export default function CTASection() {
   return (
     <section className="border-t border-slate-800 bg-[#0F172A] py-20 md:py-28">
@@ -24,7 +26,7 @@ export default function CTASection() {
                 Request a Free Quote
               </Link>
               <Link
-                href="tel:13863349423"
+                href={DEMO_PHONE_TEL}
                 className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10"
               >
                 Call Now

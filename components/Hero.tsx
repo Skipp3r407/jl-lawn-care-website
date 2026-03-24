@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { DEMO_PHONE_TEL } from "@/lib/demo-contact";
 import { heroFadeInLeft } from "@/lib/motion-variants";
 
 const trustBadges = ["5 Star Service", "Deltona Local", "Fast Response"];
@@ -53,7 +54,7 @@ export default function Hero() {
               Get Free Quote
             </Link>
             <Link
-              href="tel:13863349423"
+              href={DEMO_PHONE_TEL}
               className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 max-sm:w-full"
             >
               Call Now
